@@ -417,32 +417,6 @@
       </description>
       <arg name="serial" type="uint"/>
     </event>
-
-    <enum name="commit_mode">
-      <description summary="focus commit mode">
-        Pre-edit commit mode when the focus widget or the cursor position
-        is changed.
-      </description>
-      <entry name="clear" value="0" summary="pre-edit text is cleared."/>
-      <entry name="commit" value="1" summary="pre-edit text is committed."/>
-    </enum>
-
-    <event name="preedit_commit_mode">
-      <description summary="pre-edit commit mode">
-        Specify how the visible preedit should be handled
-        when switching the focus widget or changing the cursor position,
-        whether to commit the preedit text or clear the preedit text.
-
-        This is usually used together with the preedit_string event.
-
-        The commit behavior is the same for focus switch and
-        cursor position change.
-
-        The parameter mode selects the desired behavior and
-        its value is one from the commit mode enum.
-      </description>
-      <arg name="mode" type="uint" enum="commit_mode"/>
-    </event>
   </interface>
 
   <interface name="zwp_text_input_manager_v3" version="1">
